@@ -1,0 +1,54 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "tailwindCSS.experimental.classRegex": [
+    ["className=\"([^\"]*)", "([^\"]*)]"],
+    ["tw`([^`]*)", "([^`]*)"]
+  ],
+  "files.associations": {
+    "*.tsx": "typescriptreact",
+    "*.jsx": "javascriptreact"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/mcp-extensions": true,
+    "**/playwright-report": true,
+    "**/test-results": true,
+    "**/.expo": true,
+    "**/dist": true,
+    "**/coverage": true,
+    "**/*.log": true,
+    "**/yarn.lock": true,
+    "**/package-lock.json": false,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/mcp-extensions/**": true,
+    "**/.git/**": true,
+    "**/dist/**": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Mila",
+    "slug": "mila",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "mila",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "bundleIdentifier": "com.peanutventures.mila",
+      "supportsTablet": true,
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "825601697120-6497h66ja8kp5gah0t31ug0p32urlg75.apps.googleusercontent.com"
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.peanutventures.mila"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

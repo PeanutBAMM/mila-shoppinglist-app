@@ -1,0 +1,135 @@
+{
+  "Mila Component": {
+    "prefix": "milacomp",
+    "body": [
+      "import React from 'react';",
+      "import { View, Text } from 'react-native';",
+      "import { styled } from 'nativewind';",
+      "",
+      "interface ${1:ComponentName}Props {",
+      "  isPremium?: boolean;",
+      "}",
+      "",
+      "const StyledView = styled(View);",
+      "const StyledText = styled(Text);",
+      "",
+      "export const ${1:ComponentName}: React.FC<${1:ComponentName}Props> = ({ isPremium = false }) => {",
+      "  return (",
+      "    <StyledView className=\"${2:flex-1 p-4}\">",
+      "      <StyledText className=\"${3:text-lg font-semibold}\">",
+      "        ${4:Component Content}",
+      "      </StyledText>",
+      "    </StyledView>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "Create a new Mila component with Premium support"
+  },
+  "Mila Screen": {
+    "prefix": "milascreen",
+    "body": [
+      "import React from 'react';",
+      "import { SafeAreaView } from 'react-native-safe-area-context';",
+      "import { styled } from 'nativewind';",
+      "import { useAuth } from '@/hooks/useAuth';",
+      "",
+      "const StyledSafeAreaView = styled(SafeAreaView);",
+      "",
+      "export default function ${1:ScreenName}Screen() {",
+      "  const { user, isPremium } = useAuth();",
+      "",
+      "  return (",
+      "    <StyledSafeAreaView className=\"flex-1 bg-white\">",
+      "      ${2:// Screen content}",
+      "    </StyledSafeAreaView>",
+      "  );",
+      "}",
+      ""
+    ],
+    "description": "Create a new Mila screen with auth context"
+  },
+  "Dutch Text Component": {
+    "prefix": "dutchtext",
+    "body": [
+      "<StyledText className=\"${1:text-base}\">",
+      "  {/* NL: ${2:Dutch text here} */}",
+      "  ${2:Dutch text here}",
+      "</StyledText>"
+    ],
+    "description": "Text component with Dutch comment"
+  },
+  "Premium Feature Check": {
+    "prefix": "premiumcheck",
+    "body": [
+      "if (isPremium) {",
+      "  // Premium functionaliteit",
+      "  ${1:// Premium feature code}",
+      "} else {",
+      "  // Gratis versie",
+      "  ${2:// Free version code}",
+      "}"
+    ],
+    "description": "Premium feature conditional"
+  },
+  "Mila AI Response": {
+    "prefix": "milaresponse",
+    "body": [
+      "const milaResponse = {",
+      "  text: \"${1:Hoi! Ik ben Mila, je persoonlijke boodschappen assistent! 🛒}\",",
+      "  emotion: '${2:happy}',",
+      "  suggestions: [",
+      "    '${3:Zal ik je boodschappenlijst voor je maken?}',",
+      "    '${4:Wil je zien wat er in de aanbieding is?}'",
+      "  ]",
+      "};"
+    ],
+    "description": "Mila AI response structure"
+  },
+  "Supabase Query": {
+    "prefix": "supaquery",
+    "body": [
+      "const { data, error } = await supabase",
+      "  .from('${1:table_name}')",
+      "  .select('${2:*}')",
+      "  .eq('user_id', user?.id);",
+      "",
+      "if (error) {",
+      "  console.error('Error fetching ${1}:', error);",
+      "  return;",
+      "}"
+    ],
+    "description": "Supabase query with error handling"
+  },
+  "Shopping List Item": {
+    "prefix": "shopitem",
+    "body": [
+      "interface ShoppingItem {",
+      "  id: string;",
+      "  name: string;",
+      "  quantity: number;",
+      "  unit: '${1|stuks,kg,gram,liter,ml|}';",
+      "  category: '${2|groente-fruit,zuivel,vlees-vis,brood,droge-waren,diepvries,overig|}';",
+      "  checked: boolean;",
+      "  price?: number;",
+      "  store?: string;",
+      "}"
+    ],
+    "description": "Shopping list item interface"
+  },
+  "Test Case": {
+    "prefix": "milatest",
+    "body": [
+      "describe('${1:Feature Name}', () => {",
+      "  it('should work for free users', async () => {",
+      "    ${2:// Test free functionality}",
+      "  });",
+      "",
+      "  it('should provide enhanced features for premium users', async () => {",
+      "    ${3:// Test premium functionality}",
+      "  });",
+      "});"
+    ],
+    "description": "Test case for free/premium features"
+  }
+}
